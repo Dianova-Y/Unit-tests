@@ -17,10 +17,10 @@ public class SalesManager {
         return max;
     }
 
-    public int middle(){
-        int min = 100000;
-        int sum = 0;
-        for (int sale : sales) {
+    public long middle(){
+        long min = 100000;
+        long sum = 0;
+        for (long sale : sales) {
             if (sale < min) {
                 min = sale;
             }
@@ -28,7 +28,7 @@ public class SalesManager {
         for (int i = 0; i < sales.length; i++) {
             sum +=sales[i];
         }
-        int middle = (sum - min - max()) / (sales.length - 2);
+        long middle = (sum - min - max()) / (sales.length - 2);
         return middle;
     }
 }
